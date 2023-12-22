@@ -13,9 +13,8 @@
         "semi": ["error", "always"],
         "indent": ["error", "tab"],
         "quotes": ["error", "single"],
-        "max-len": ["error", {"code": 80}],
         "object-curly-spacing": ["error", "always"],
-        "array-bracket-spacing": ["error", "always"]
-
+        "array-bracket-spacing": ["error", "always"],
+        "keyword-spacing": ["error", { "before": true, "after": true }]
     }
 }
