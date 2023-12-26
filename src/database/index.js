@@ -1,13 +1,6 @@
-const sqlite3 = require('sqlite3');
-const sqlite = require('sqlite');
-const path = require('path');
+const config = require('../../knexfile');
+const knex = require('knex');
 
-async function dbConnection() {
-	const database = await sqlite.open({
-		filename: path.resolve(__dirname, '..', 'database', 'database.db'),
-		driver: sqlite3.Database
-	});
-	return database;    
-}
+const connection = knex(config.development);
 
-module.exports = dbConnection;
+module.exports = connection;
