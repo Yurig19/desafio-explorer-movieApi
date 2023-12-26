@@ -23,7 +23,19 @@ class MoviesController {
 		await knex('movie_tags').insert(tagsInsert);
 
 		res.json();
-	}   
+	}
+
+	async read(req, res) {
+		const { id } = req.params;
+
+		const movie = await knex('movies').where({ id }).first();
+		const tags = await knex('movie_tags').where({ movie_id:id }).orderBy('name');
+
+		return res.json({
+			...movie,
+			tags
+		});
+	}
 }
 
 module.exports = MoviesController;
