@@ -43,6 +43,10 @@
                 "before": false,
                 "after": true
             }
-        ]
+        ],
+        "arrow-parens": [
+            "error",
+            "always"
+            ]
     }
 }
