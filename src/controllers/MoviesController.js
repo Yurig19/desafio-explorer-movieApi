@@ -77,6 +77,14 @@ class MoviesController {
 
 		return res.json(movieWithTags);
 	}
+
+	async delete(req, res) {
+		const { id } = req.params;
+
+		await knex('movies').where({ id }).delete();
+
+		return res.json();
+	}
 }
 
 module.exports = MoviesController;
