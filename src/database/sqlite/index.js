@@ -5,9 +5,9 @@ const path = require('path');
 async function dbConnection() {
 	const database = await sqlite.open({
 		filename: path.resolve(__dirname, '..', 'database', 'database.db'),
-		driver: sqlite3.Database
+		driver: sqlite3.Database,
 	});
-	return database;    
+	return database;
 }
 
 module.exports = dbConnection;

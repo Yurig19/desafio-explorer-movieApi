@@ -10,12 +10,39 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "semi": ["error", "always"],
-        "indent": ["error", "tab"],
-        "quotes": ["error", "single"],
-        "object-curly-spacing": ["error", "always"],
-        "array-bracket-spacing": ["error", "always"],
-        "keyword-spacing": ["error", { "before": true, "after": true }],
-        "comma-spacing": ["error", { "before": false, "after": true }]
+        "semi": [
+            "error",
+            "always"
+        ],
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ]
     }
 }

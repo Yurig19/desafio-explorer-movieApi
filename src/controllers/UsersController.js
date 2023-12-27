@@ -9,7 +9,8 @@ class UsersController {
 
 		const database = await dbConnection();
 
-		const validEmailExists = await database.get('SELECT * FROM users WHERE email = (?)', [ email ]);
+		const validEmailExists = await database.get(
+			'SELECT * FROM users WHERE email = (?)', [ email ]);
 
 		if (validEmailExists) {
 			throw new AppError('Esse email já está em uso!');

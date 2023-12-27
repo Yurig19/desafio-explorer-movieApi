@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon ./src/server.js",
     "migrate": "knex migrate:latest",
-    "migrate:rollback": " knex migrate:rollback",
+    "migrate:rollback": "knex migrate:rollback",
     "lint:fix": "eslint . --fix"
   },
   "keywords": [],
@@ -23,6 +23,10 @@
   },
   "devDependencies": {
     "eslint": "^8.56.0",
-    "nodemon": "^3.0.2"
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-standard": "^5.0.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
   }
 }
