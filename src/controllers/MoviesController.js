@@ -1,9 +1,14 @@
 const knex = require('../database');
+const AppError = require('../utils/AppError');
 
 class MoviesController {
 	async create(req, res) {
 		const { name, description, rating, tag } = req.body;
 		const { user_id } = req.params;
+
+		if (rating > 5) {
+			throw new AppError('O rating deverá ser um numero menor que 5');
+		}
 
 		const [ movie_id ] = await knex('movies').insert({
 			name,
