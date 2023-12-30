@@ -6,8 +6,8 @@ class MoviesController {
 		const { name, description, rating, tag } = req.body;
 		const { user_id } = req.params;
 
-		if (rating > 5) {
-			throw new AppError('O rating deverá ser um numero menor que 5');
+		if (rating > 5 || rating < 0 ) {
+			throw new AppError('A avaliação deverá representar um numero de 1 a 5!');
 		}
 
 		const [ movie_id ] = await knex('movies').insert({
